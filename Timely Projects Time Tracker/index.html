@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timely</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="filesaver.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
+</head>
+
+<body> 
+    <div class="app app--main">
+        <div class="modal">
+            <div class="modal__inner">
+                <form class="modal__form">
+                    <label>Project</label>
+                    <input type="text" class="modal__title" placeholder="Project name...">
+                    <button class="button modal__cancel">Cancel </button>
+                    <input type="submit" class="button modal__save" value="Save">
+                </form>
+            </div>
+        </div>
+        <div class="timer-area">
+            <div class="timer-wrapper">
+                <div class="timer">
+                    <span class="minutes">00</span>:<span class="seconds">00</span>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="mix-btn" class="button start">Start</button>
+                <form class="task-form">
+                    <label for="task-name">Project Name</label>
+                    <input type="text" class="task-label" placeholder="Project name..." id="task-name">
+                    <br><br><br>
+                    <button class="button cancel">Cancel</button>
+                    <button class="button finish">Finish</button>
+                    <input type="submit" class="task-submit">
+                </form>
+            </div>
+        </div>
+        <div class="task-area">
+            <h4 class="completed-tasks"></h4>
+            <ul class="time-list"></ul>
+            <div class="time-list-meta">
+                <button data-action="clear-all" class="button clear">Delete all</button>
+                <button id="excel-button" class="btn btn-primary" onclick="downloadAsExcel()">Download Excel</button>
+            </div>
+        </div>
+    </div>
+    <script src="./timely.js"></script>
+</body>
+
+</html>
