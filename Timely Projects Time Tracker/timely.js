@@ -53,10 +53,6 @@ function stopTimer() {
   // Update UI
   $taskForm[0].classList.add('task-form--show');
   $timerWrapper[0].classList.remove('timer-wrapper--running');
-
-  console.log(timerTime);
-  console.log(startTime.toLocaleString());
-  console.log(endTime.toLocaleString());
   document.title = 'Timely';
 }
 mixBtn.addEventListener('click', e => {
